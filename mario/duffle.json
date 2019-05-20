@@ -1,0 +1,25 @@
+{
+    "name": "mario",
+    "version": "0.1.0",
+    "description": "mario bundle",
+    "keywords": [
+        "mario",
+        "cnab",
+        "tutorial"
+    ],
+    "maintainers": [
+        {
+            "name": "Ravi Teja Yaramati",
+            "email": "raviydevops@gmail.com"
+        }
+    ],
+    "invocationImages": {
+        "cnab": {
+            "name": "cnab",
+            "builder": "docker",
+            "configuration": {
+                "registry": "deislabs"
+            }
+        }
+    }
+}

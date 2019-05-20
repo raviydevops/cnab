@@ -1,0 +1,39 @@
+#!/bin/bash
+
+helm init
+action=$1
+
+cd /cnab/app
+
+case $action in
+    install)
+
+    echo "Install action"
+    helm install --name mario charts/mario
+    ;;
+
+    uninstall)
+
+    echo "Uninstall action"
+    helm delete mario
+    ;;
+
+    upgrade)
+    echo "Upgrade action"
+    ;;
+
+    downgrade)
+    echo "Downgrade action"
+    ;;
+
+    status)
+    echo "Status action"
+    helm list --all
+    ;;
+
+    *)
+    echo "No action for $action"
+    ;;
+esac
+
+echo "Action $action complete."
